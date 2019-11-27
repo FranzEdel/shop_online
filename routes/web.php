@@ -1,5 +1,5 @@
 <?php
-
+use App\Product;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,7 +12,28 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+
+    /*$prod = new Product();
+
+    $prod->nombre = 'Producto 3';
+    $prod->slug = 'Producto 3';
+    $prod->category_id = 2;
+    $prod->descripcion_corta = 'Producto 3';
+    $prod->descripcion_larga = 'Producto 3';
+    $prod->especificaciones = 'Producto 3';
+    $prod->datos_de_interes = 'Producto 3';
+    $prod->estado = 'Nuevo';
+    $prod->activo = 'Si';
+    $prod->sliderprincipal = 'No';
+    $prod->save();
+    return $prod;*/
+
+    //return view('welcome');
+
+    //$prod = Product::find(1)->first();
+    //return $prod;
+
+    return view('tienda.index');
 });
 
 Auth::routes();
